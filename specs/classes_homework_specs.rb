@@ -6,7 +6,7 @@ require_relative('../classes_homework')
 class  TestCodeClanStudents < MiniTest::Test
 
     def setup
-        @student = Student.new("Bob", "E39")
+        @student = Student.new("Bob", "E39", "Ruby")
     end
 
     def test_student_name()
@@ -27,6 +27,9 @@ class  TestCodeClanStudents < MiniTest::Test
         assert_equal("E40", @student.get_cohort)
     end
 
-
+    def test_make_student_talk()
+        sentence = @student.speech()
+        assert_equal("I can talk!", sentence)
+    end
 
 end
