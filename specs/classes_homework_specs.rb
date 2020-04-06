@@ -36,5 +36,20 @@ class  TestCodeClanStudents < MiniTest::Test
         sentence = @student.fav_language()
         assert_equal("I love Ruby", sentence)
     end
+end
+
+class TestSportsTeam < MiniTest::Test
+
+    def setup
+        @team = Team.new("Ruby Rollers", ["Dave", "Sam", "Alex"], "Yuki")
+    end
+
+    def test_team_name()
+        assert_equal("Ruby Rollers", @team.name)
+     end
+
+     def test_players()
+        assert_equal(["Dave", "Sam", "Alex"], @team.players)
+     end
 
 end
