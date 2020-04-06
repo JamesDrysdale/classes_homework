@@ -1,8 +1,6 @@
 
 class Student
 
-
-
     def initialize(name, cohort, language)
         @name = name
         @cohort = cohort
@@ -27,6 +25,10 @@ class Student
 
     def speech()
         return "I can talk!"
+    end
+
+    def fav_language()
+        return "I love #{@language}"
     end
 
 end
