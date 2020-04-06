@@ -61,4 +61,9 @@ class TestSportsTeam < MiniTest::Test
         assert_equal("Swift Skaters", @team.name)
      end
 
+     def test_add_player()
+        @team.add_player("Jo")
+        assert_equal(["Dave", "Sam", "Alex", "Jo"], @team.players)
+     end
+
 end

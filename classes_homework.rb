@@ -43,7 +43,7 @@ class Team
         @coach = coach
     end
 
-    ##The three functions below are getters.
+    ##The three methods below are getters.
     ##The fourth is a setter
     ##They are no longer needed due to refactoring
     ##The attr_accessor above replaces them
@@ -60,11 +60,13 @@ class Team
     #     return @coach
     # end
 
-    # def set_name(new_name)
-    #     @name = new_name
-    # end
+    def set_name(new_name)
+        @name = new_name
+    end
 
-
+    def add_player(new_player)
+        return @players << new_player
+    end
 
 
 end
