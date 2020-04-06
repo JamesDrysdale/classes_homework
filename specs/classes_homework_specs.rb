@@ -13,4 +13,9 @@ class  TestCodeClanStudents < MiniTest::Test
         assert_equal("Bob", @student.get_student_name)
     end
 
+    def test_student_cohort()
+        assert_equal("E39", @student.get_cohort)
+    end
+    
+
 end
