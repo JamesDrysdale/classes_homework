@@ -34,22 +34,29 @@ end
 
 class Team
 
-def initialize(name, players, coach)
-    @name = name
-    @players = players
-    @coach = coach
-end
+    def initialize(name, players, coach)
+       @name = name
+       @players = players
+       @coach = coach
+    end
 
-def name()
-    return @name
-end
+    def name()
+        return @name
+    end
 
-def players()
-    return @players
-end
+    def players()
+        return @players
+    end
 
-def coach()
-    return @coach
-end
+    def coach()
+        return @coach
+    end
+
+    def set_name(new_name)
+        @name = new_name
+    end
+
+    
+
 
 end

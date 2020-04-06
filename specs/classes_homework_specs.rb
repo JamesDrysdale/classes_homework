@@ -41,7 +41,7 @@ end
 class TestSportsTeam < MiniTest::Test
 
     def setup
-        @team = Team.new("Ruby Rollers", ["Dave", "Sam", "Alex"], "Yuki")
+        @team = Team.new("Ruby Rollers", ["Dave", "Sam", "Alex"], "Yuri")
     end
 
     def test_team_name()
@@ -53,7 +53,12 @@ class TestSportsTeam < MiniTest::Test
      end
 
      def test_coach()
-        assert_equal("Yuki", @team.coach)
+        assert_equal("Yuri", @team.coach)
+     end
+
+     def test_update_team_name()
+        @team.set_name("Swift Skaters")
+        assert_equal("Swift Skaters", @team.name)
      end
 
 end
