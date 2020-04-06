@@ -33,30 +33,38 @@ class Student
 end
 
 class Team
+    attr_accessor :name
+    attr_accessor :players
+    attr_accessor :coach
 
     def initialize(name, players, coach)
-       @name = name
-       @players = players
-       @coach = coach
+        @name = name
+        @players = players
+        @coach = coach
     end
 
-    def name()
-        return @name
-    end
-
-    def players()
-        return @players
-    end
-
-    def coach()
-        return @coach
-    end
-
-    def set_name(new_name)
-        @name = new_name
-    end
-
+    ##The three functions below are getters.
+    ##The fourth is a setter
+    ##They are no longer needed due to refactoring
+    ##The attr_accessor above replaces them
     
+    # def name()
+    #     return @name
+    # end
+
+    # def players()
+    #     return @players
+    # end
+
+    # def coach()
+    #     return @coach
+    # end
+
+    # def set_name(new_name)
+    #     @name = new_name
+    # end
+
+
 
 
 end
